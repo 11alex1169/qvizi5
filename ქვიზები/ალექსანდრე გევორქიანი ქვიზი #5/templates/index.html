@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>ფილმების სია</h1>
+<div class="row">
+    {% for movie in movies %}
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="card-text">{{ movie.description }}</p>
+                <a href="{{ url_for('movie_detail', movie_id=movie.id) }}" class="btn btn-primary">დეტალურად</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

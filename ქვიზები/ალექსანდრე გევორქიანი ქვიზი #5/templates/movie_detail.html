@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ movie.title }}</h2>
+<p><strong>რეჟისორი:</strong> {{ movie.director }}</p>
+<p><strong>წელი:</strong> {{ movie.year }}</p>
+<p>{{ movie.description }}</p>
+<a href="{{ url_for('index') }}" class="btn btn-secondary">უკან</a>
+{% endblock %}
